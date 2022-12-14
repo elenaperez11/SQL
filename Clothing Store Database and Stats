@@ -1,0 +1,31 @@
+--Create a Clothing Store Database
+CREATE TABLE store_info (ID INTEGER PRIMARY KEY, name TEXT, price INTEGER, color TEXT, size TEXT);
+
+INSERT INTO store_info VALUES
+(1, "Shirt", 13.99, "Black", "M"),
+(2, "Pants", 25.99, "Grey", "L"),
+(3, "Shoes", 45.99, "White", "L"),
+(4, "Leggings", 40.99, "Black", "L"),
+(5, "Socks", 9.99, "White", "S"),
+(6, "Jacket", 50.99, "Red", "M"),
+(7, "Sweater", 45.99, "Blue", "S"),
+(8, "Belt", 15.00, "Black", "S"),
+(9, "Hoodie", 13.99, "Blue", "M"),
+(10, "Hat", 9.99, "Grey", "S"),
+(11, "Jeans", 25.99, "Blue", "L"),
+(12, "Beanie", 15.99, "White", "S"),
+(13, "Turtleneck", 27.99, "White", "L"),
+(14, "Scarf", 19.99, "Pink", "S"),
+(15, "Glasses", 13.99, "Black", "S");
+
+--Display all of the database
+SELECT * FROM store_info;
+
+--Display database ordered by price
+SELECT * FROM store_info ORDER BY price;
+
+--What is the SUM price of all black colored items
+SELECT SUM(price) FROM store_info WHERE color = 'Black'
+
+--What is the Average price of all Large items
+SELECT AVG(price) FROM store_info WHERE Size = 'L'
